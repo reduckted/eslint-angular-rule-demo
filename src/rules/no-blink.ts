@@ -17,7 +17,7 @@ export default ESLintUtils.RuleCreator.withoutDocs({
     create(context) {
         const parserServices = getTemplateParserServices(context);
         return {
-            [`Element$1[name=blink]`](element: TmplAstElement) {
+            'Element$1[name=blink]': (element: TmplAstElement) => {
                 context.report({
                     loc: parserServices.convertNodeSourceSpanToLoc(
                         element.startSourceSpan
